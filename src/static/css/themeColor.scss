@@ -1,0 +1,583 @@
+// 经典红 a
+$a-m: #ff4544;
+$a-s: #f39800;
+
+// 活力黄 b
+$b-m: #fcc600;
+$b-s: #555555;
+
+// 浪漫粉 c
+$c-m: #ff547b;
+$c-s: #ffe6e8;
+
+// 流光金 d
+$d-m: #ddb766;
+$d-s: #f0ebd8;
+
+// 优雅紫 e
+$e-m: #7783ea;
+$e-s: #e9ebff;
+
+// 品味红 f
+$f-m: #ff4544;
+$f-s: #555555;
+
+// 清醒绿 g
+$g-m: #63be72;
+$g-s: #e1f4e3;
+
+// 商务蓝 h
+$h-m: #4a90e2;
+$h-s: #dbe9f9;
+
+// 纯粹黑 i
+$i-m: #333333;
+$i-s: #dedede;
+
+// 热情红 j
+$j-m: #ff4544;
+$j-s: #ffdada;
+
+// 商城管理蓝 q
+$app-admin-main-color: #446dfd;
+
+// 通用的浅灰色
+$app-light-gray-color: #f7f7f7;
+
+// 禁用色
+$disable: #999999;
+
+$themes: (
+	// 经典红 a
+	a-m: $a-m,
+	a-s: $a-s,
+	
+	// 活力黄 b
+	b-m: $b-m,
+	b-s: $b-s,
+	
+	// 浪漫粉 c
+	c-m: $c-m,
+	c-s: $c-s,
+
+	// 流光金 d
+	d-m: $d-m,
+	d-s: $d-s,
+
+	// 优雅紫 e
+	e-m: $e-m,
+	e-s: $e-s,
+
+	// 品味红 f
+	f-m: $f-m,
+	f-s: $f-s,
+
+	// 清醒绿 g
+	g-m: $g-m,
+	g-s: $g-s,
+
+	// 商务蓝 h
+	h-m: $h-m,
+	h-s: $h-s,
+
+	// 纯粹黑 i
+	i-m: $i-m,
+	i-s: $i-s,
+
+	// 热情红 j
+	j-m: $j-m,
+	j-s: $j-s,
+
+	// 禁用 disable
+	disable-m: $disable,
+	disable-s: $disable,
+	
+	// 商城管理蓝 q
+	admin-m: $app-admin-main-color,
+	admin-s: $app-admin-main-color
+);
+
+$list: a, b, c, d, e, f, g, h, i, j, disable, admin;
+$ms: m, s;
+
+@each $theme in $list {
+	@each $item in $ms {
+		// 文字颜色
+		.#{$theme}.#{$theme}-#{$item}-text {
+			color: map-get($themes, '#{$theme}-#{$item}');
+		}
+		// 背景色
+		.#{$theme}.#{$theme}-#{$item}-back {
+			background-color: map-get($themes, '#{$theme}-#{$item}');
+		}
+		// 边框色
+		.#{$theme} .#{$theme}-#{$item}-border {
+			border-color: map-get($themes, '#{$theme}-#{$item}');
+		}
+	}
+}
+
+.app-light-gray-back {
+  background-color: $app-light-gray-color;
+}
+
+// 背景色
+.a.a-m-back-o {
+  background: rgba(255,69,68, 0.1);
+}
+.b.b-m-back-o {
+  background: rgba(252,198,0, 0.1);
+}
+.c.c-m-back-o {
+  background: rgba(255,84,123, 0.1);
+}
+.d.d-m-back-o {
+  background: rgba(221,183,102, 0.1);
+}
+.e.e-m-back-o {
+  background: rgba(119,131,234, 0.1);
+}
+.f.f-m-back-o {
+  background: rgba(255,69,68, 0.1);
+}
+.g.g-m-back-o {
+  background: rgba(99,190,114, 0.1);
+}
+.h.h-m-back-o {
+  background: rgba(74,144,226, 0.1);
+}
+.i.i-m-back-o {
+  background: rgba(51,51,51, 0.1);
+}
+.j.j-m-back-o {
+  background: rgba(255,69,68, 0.1);
+}
+
+// 背景色
+.a.a-m-back-p {
+  background: rgba(255,69,68, 0.2);
+}
+.b.b-m-back-p {
+  background: rgba(252,198,0, 0.2);
+}
+.c.c-m-back-p {
+  background: rgba(255,84,123, 0.2);
+}
+.d.d-m-back-p {
+  background: rgba(221,183,102, 0.2);
+}
+.e.e-m-back-p {
+  background: rgba(119,131,234, 0.2);
+}
+.f.f-m-back-p {
+  background: rgba(255,69,68, 0.2);
+}
+.g.g-m-back-p {
+  background: rgba(99,190,114, 0.2);
+}
+.h.h-m-back-p {
+  background: rgba(74,144,226, 0.2);
+}
+.i.i-m-back-p {
+  background: rgba(51,51,51, 0.2);
+}
+.j.j-m-back-p {
+  background: rgba(255,69,68, 0.2);
+}
+
+// 背景色
+.a.a-m-back-l {
+  background: rgba(255,69,68, 0.35);
+}
+.b.b-m-back-l {
+  background: rgba(252,198,0, 0.35);
+}
+.c.c-m-back-l {
+  background: rgba(255,84,123, 0.35);
+}
+.d.d-m-back-l {
+  background: rgba(221,183,102, 0.35);
+}
+.e.e-m-back-l {
+  background: rgba(119,131,234, 0.35);
+}
+.f.f-m-back-l {
+  background: rgba(255,69,68, 0.35);
+}
+.g.g-m-back-l {
+  background: rgba(99,190,114, 0.35);
+}
+.h.h-m-back-l {
+  background: rgba(74,144,226, 0.35);
+}
+.i.i-m-back-l {
+  background: rgba(51,51,51, 0.35);
+}
+.j.j-m-back-l {
+  background: rgba(255,69,68, 0.35);
+}
+
+// 背景色
+.a.a-m-back-q {
+  background: rgba(255,69,68, 0.8);
+}
+.b.b-m-back-q {
+  background: rgba(252,198,0, 0.8);
+}
+.c.c-m-back-q {
+  background: rgba(255,84,123, 0.8);
+}
+.d.d-m-back-q {
+  background: rgba(221,183,102, 0.8);
+}
+.e.e-m-back-q {
+  background: rgba(119,131,234, 0.8);
+}
+.f.f-m-back-q {
+  background: rgba(255,69,68, 0.8);
+}
+.g.g-m-back-q {
+  background: rgba(99,190,114, 0.8);
+}
+.h.h-m-back-q {
+  background: rgba(74,144,226, 0.8);
+}
+.i.i-m-back-q {
+  background: rgba(51,51,51, 0.8);
+}
+.j.j-m-back-q {
+  background: rgba(255,69,68, 0.8);
+}
+// 边框颜色 （秒杀）
+.a .a.a-m-border-m{
+  border-color: $a-m;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.a .a.a-s-border-m {
+  border-color: $a-s;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.b .b.b-m-border-m {
+  border-color: $b-m;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.b .b.b-s-border-m {
+  border-color: $b-s;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.c .c.c-m-border-m {
+  border-color: $c-m;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.c .c.c-s-border-m {
+  border-color: $c-s;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.d .d.d-m-border-m {
+  border-color: $d-m;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.d .d.d-s-border-m {
+  border-color: $d-s;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.e .e.e-m-border-m {
+  border-color: $e-m;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.e .e.e-s-border-m {
+  border-color: $e-s;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.f .f.f-m-border-m {
+  border-color: $f-m;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.f .f.f-s-border-m {
+  border-color: $f-s;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.g .g.g-m-border-m {
+  border-color: $g-m;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.g .g.g-s-border-m {
+  border-color: $g-s;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.h .h.h-m-border-m {
+  border-color: $h-m;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.h .h.h-s-border-m {
+  border-color: $h-s;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.i .i-m-border-m {
+  border-color: $i-m;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.i .i.i-s-border-m {
+  border-color: $i-s;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.j .j.j-m-border-m {
+  border-color: $j-m;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.j .j.j-s-border-m {
+  border-color: $j-s;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+// 背景色
+.a.a-m-gradient {
+  background:linear-gradient(140deg, $a-m, $a-s) ;
+}
+
+.b.b-m-gradient {
+  background: linear-gradient(140deg, $b-m, $b-s) ;
+}
+
+.c.c-m-gradient {
+  background: linear-gradient(140deg, $c-m, $c-s) ;
+}
+
+.d.d-m-gradient{
+  background:linear-gradient(140deg, $d-m, $d-s) ;
+}
+
+.e.e-m-gradient {
+  background: linear-gradient(140deg, $e-m, $e-s) ;
+}
+
+.f.f-m-gradient{
+  background: linear-gradient(140deg, $f-m, $f-s) ;
+}
+
+.g.g-m-gradient {
+  background: linear-gradient(140deg, $g-m, $g-s) ;
+}
+
+.h.h-m-gradient {
+  background: linear-gradient(140deg, $h-m, $h-s) ;
+}
+
+.i.i-m-gradient {
+  background: linear-gradient(140deg, $i-m, $i-s) ;
+}
+
+.j.j-m-gradient {
+  background: linear-gradient(140deg, $j-m, $j-s) ;
+}
+
+// 背景色
+.a.a-m-gradient-l {
+  background:linear-gradient(to right, rgba(255, 69,  68, 1), rgba(255, 69,  68, 0.5)) ;
+}
+
+.b.b-m-gradient-l {
+  background: linear-gradient(to right, rgba(252, 198, 0, 1), rgba(252, 198, 0, 0.5)) ;
+}
+
+.c.c-m-gradient-l {
+  background: linear-gradient(to right, rgba(255, 84, 123, 1), rgba(255, 84, 123, 0.5)) ;
+}
+
+.d.d-m-gradient-l{
+  background:linear-gradient(to right, rgba(221, 183, 102, 1), rgba(221, 183, 102, 0.5)) ;
+}
+
+.e.e-m-gradient-l {
+  background: linear-gradient(to right, rgba(119, 131, 234, 1), rgba(119, 131, 234, 0.5)) ;
+}
+
+.f.f-m-gradient-l{
+  background: linear-gradient(to right, rgba(255, 69, 68, 1), rgba(255, 69, 68, 0.5)) ;
+}
+
+.g.g-m-gradient-l {
+  background: linear-gradient(to right, rgba(99, 190, 114, 1), rgba(99, 190, 114, 0.5)) ;
+}
+
+.h.h-m-gradient-l {
+  background: linear-gradient(to right, rgba(74, 144, 226, 1), rgba(74, 144, 226, 0.5)) ;
+}
+
+.i.i-m-gradient-l {
+  background: linear-gradient(to right, rgba(51,51,51, 1), rgba(51,51,51, 0.5)) ;
+}
+
+.j.j-m-gradient-l {
+  background: linear-gradient(to right, rgba(255, 69, 68, 1), rgba(255, 69, 68, 0.5));
+}
+
+.a.a-m-gradient-o {
+  background: linear-gradient(to right, rgb(255,69,68),rgba(255,69,68, 0.7));
+}
+.b.b-m-gradient-o {
+  background: linear-gradient(to right, rgb(252,198,0),rgba(252,198,0, 0.7));
+}
+.c.c-m-gradient-o {
+  background: linear-gradient(to right, rgb(255,84,123),rgba(255,84,123, 0.7));
+}
+.d.d-m-gradient-o {
+  background: linear-gradient(to right, rgb(221,183,102),rgba(221,183,102, 0.7));
+}
+.e.e-m-gradient-o {
+  background: linear-gradient(to right, rgb(119,131,234),rgba(119,131,234, 0.7));
+}
+.f.f-m-gradient-o {
+  background: linear-gradient(to right, rgb(255,69,68),rgba(255,69,68, 0.7));
+}
+.g.g-m-gradient-o {
+  background: linear-gradient(to right, rgb(99,190,114),rgba(99,190,114, 0.7));
+}
+.h.h-m-gradient-o {
+  background: linear-gradient(to right, rgb(74,144,226),rgba(74,144,226, 0.7));
+}
+.i.i-m-gradient-o {
+  background: linear-gradient(to right, rgb(51,51,51),rgba(51,51,51, 0.7));
+}
+.j.j-m-gradient-o {
+  background: linear-gradient(to right, rgb(255,69,68),rgba(255,69,68, 0.7));
+}
+
+.a.a-s-gradient-o {
+  background: linear-gradient(to right, rgb(243,152,0),rgba(243,152,0, 0.7));
+}
+.b.b-s-gradient-o {
+  background: linear-gradient(to right, rgb(85,85,85),rgba(85,85,85, 0.7));
+}
+.c.c-s-gradient-o {
+  background: linear-gradient(to right, rgb(255,230,232),rgba(255,230,232, 0.7));
+}
+.d.d-s-gradient-o {
+  background: linear-gradient(to right, rgb(240,235,216),rgba(240,235,216, 0.7));
+}
+.e.e-s-gradient-o {
+  background: linear-gradient(to right, rgb(233,235,255),rgba(233,235,255, 0.7));
+}
+.f.f-s-gradient-o {
+  background: linear-gradient(to right, rgb(85,85,85),rgba(85,85,85, 0.7));
+}
+.g.g-s-gradient-o {
+  background: linear-gradient(to right, rgb(225,244,227),rgba(225,244,227, 0.7));
+}
+.h.h-s-gradient-o {
+  background: linear-gradient(to right, rgb(219,233,249),rgba(219,233,249, 0.7));
+}
+.i.i-s-gradient-o {
+  background: linear-gradient(to right, rgb(222,222,222),rgba(222,222,222, 0.7));
+}
+.j.j-s-gradient-o {
+  background: linear-gradient(to right, rgb(255,218,218),rgba(255,218,218, 0.7));
+}
+
+
+.a.a-m-gradient-btn {
+  background: linear-gradient(to left, rgb(255,69,68),rgba(255,69,68, 0.7));
+}
+.b.b-m-gradient-btn {
+  background: linear-gradient(to left, rgb(252,198,0),rgba(252,198,0, 0.7));
+}
+.c.c-m-gradient-btn {
+  background: linear-gradient(to left, rgb(255,84,123),rgba(255,84,123, 0.7));
+}
+.d.d-m-gradient-btn {
+  background: linear-gradient(to left, rgb(221,183,102),rgba(221,183,102, 0.7));
+}
+.e.e-m-gradient-btn {
+  background: linear-gradient(to left, rgb(119,131,234),rgba(119,131,234, 0.7));
+}
+.f.f-m-gradient-btn {
+  background: linear-gradient(to left, rgb(255,69,68),rgba(255,69,68, 0.7));
+}
+.g.g-m-gradient-btn {
+  background: linear-gradient(to left, rgb(99,190,114),rgba(99,190,114, 0.7));
+}
+.h.h-m-gradient-btn {
+  background: linear-gradient(to left, rgb(74,144,226),rgba(74,144,226, 0.7));
+}
+.i.i-m-gradient-btn {
+  background: linear-gradient(to left, rgb(51,51,51),rgba(51,51,51, 0.7));
+}
+.j.j-m-gradient-btn {
+  background: linear-gradient(to left, rgb(255,69,68),rgba(255,69,68, 0.7));
+}
+
+.a.a-s-gradient-btn {
+  background: linear-gradient(to right, rgb(243,152,0),rgba(243,152,0, 0.7));
+}
+.b.b-s-gradient-btn {
+  background: linear-gradient(to right, rgb(85,85,85),rgba(85,85,85, 0.7));
+}
+.c.c-s-gradient-btn {
+  background: linear-gradient(to right, rgb(255,230,232),rgba(255,230,232, 0.7));
+}
+.d.d-s-gradient-btn {
+  background: linear-gradient(to right, rgb(240,235,216),rgba(240,235,216, 0.7));
+}
+.e.e-s-gradient-btn {
+  background: linear-gradient(to right, rgb(233,235,255),rgba(233,235,255, 0.7));
+}
+.f.f-s-gradient-btn {
+  background: linear-gradient(to right, rgb(85,85,85),rgba(85,85,85, 0.7));
+}
+.g.g-s-gradient-btn {
+  background: linear-gradient(to right, rgb(225,244,227),rgba(225,244,227, 0.7));
+}
+.h.h-s-gradient-btn {
+  background: linear-gradient(to right, rgb(219,233,249),rgba(219,233,249, 0.7));
+}
+.i.i-s-gradient-btn {
+  background: linear-gradient(to right, rgb(222,222,222),rgba(222,222,222, 0.7));
+}
+.j.j-s-gradient-btn {
+  background: linear-gradient(to right, rgb(255,218,218),rgba(255,218,218, 0.7));
+}
+//
+//// 文字色
+.app-admin-color {
+ color: $app-admin-main-color
+}

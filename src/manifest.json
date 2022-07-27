@@ -1,0 +1,75 @@
+{
+    "name" : "hejiang_shop",
+    "appid" : "__UNI__4A6DDE4",
+    "description" : " 榜店商城",
+    "versionName" : "1.0.0",
+    "versionCode" : "100",
+    "transformPx" : false,
+    "uniStatistics" : {
+        "enable" : false
+    },
+    "app-plus" : {
+        "distribute" : {
+            "android" : {
+                "abiFilters" : [ "armeabi-v7a", "arm64-v8a", "x86" ]
+            }
+        }
+    },
+    "quickapp" : {},
+    "mp-weixin" : {
+        "appid" : "wx10f15fa48f10fe6f",
+        "setting" : {
+            "urlCheck" : false,
+            "es6" : true
+        },
+        "usingComponents" : true,
+        "optimization":{"subPackages":true},
+        "permission" : {
+            "scope.userLocation" : {
+                "desc" : "请求获取您的位置信息"
+            }
+        },
+        "lazyCodeLoading": "requiredComponents"
+    },
+    "mp-alipay" : {
+        "usingComponents" : true
+    },
+    "mp-baidu" : {
+        "appid" : "",
+        "usingComponents" : true
+    },
+    "mp-toutiao" : {
+        "appid" : "",
+        "usingComponents" : true,
+        "urlCheck" : false
+    },
+    "mp-qq" : {
+        "usingComponents" : true
+    },
+    "h5" : {
+        "async" : {
+            "loading" : "AsyncLoading",
+            "error" : "AsyncError",
+            "delay" : 2000,
+            "timeout" : 10000
+        },
+        "uniStatistics" : {
+            "enable" : false
+        },
+        "publicPath" : "/",
+        "router" : {
+            "base" : "/",
+            "mode" : "hash"
+        },
+        "sdkConfigs" : {
+            "maps" : {
+                "qqmap" : {
+                    // 腾讯地图秘钥（key）https://lbs.qq.com/dev/console/key/manage
+                    "key" : ""
+                }
+            }
+        },
+        "template" : "public/index.html",
+        "title" : "榜店商城"
+    }
+}
